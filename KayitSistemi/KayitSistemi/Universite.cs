@@ -34,7 +34,7 @@ namespace KayitSistemi
                 departments.Add(id, new Fakulte(id, name));
             }catch(ArgumentException a)
             {
-                throw new ArgumentException("Ayni idye sahip iki adet fakulte olusturulamaz");
+                throw new ArgumentException("Ayni idye sahip iki adet fakulte olusturulamaz"); 
             }
             
         }

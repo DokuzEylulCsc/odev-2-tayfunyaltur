@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.FakultelerLb = new System.Windows.Forms.ListBox();
             this.secButton = new System.Windows.Forms.Button();
-            this.fakId = new System.Windows.Forms.Label();
+            this.FakultelerLb = new System.Windows.Forms.ListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.EkleButton = new System.Windows.Forms.Button();
+            this.nameText = new System.Windows.Forms.TextBox();
             this.IdText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.nameText = new System.Windows.Forms.TextBox();
-            this.EkleButton = new System.Windows.Forms.Button();
+            this.fakId = new System.Windows.Forms.Label();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +53,27 @@
             this.panel1.Size = new System.Drawing.Size(584, 225);
             this.panel1.TabIndex = 0;
             // 
+            // secButton
+            // 
+            this.secButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.secButton.Location = new System.Drawing.Point(474, 10);
+            this.secButton.Name = "secButton";
+            this.secButton.Size = new System.Drawing.Size(107, 204);
+            this.secButton.TabIndex = 1;
+            this.secButton.Text = "Bolum Islemine Git";
+            this.secButton.UseVisualStyleBackColor = true;
+            this.secButton.Click += new System.EventHandler(this.secButton_Click);
+            // 
+            // FakultelerLb
+            // 
+            this.FakultelerLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FakultelerLb.FormattingEnabled = true;
+            this.FakultelerLb.ItemHeight = 25;
+            this.FakultelerLb.Location = new System.Drawing.Point(3, 3);
+            this.FakultelerLb.Name = "FakultelerLb";
+            this.FakultelerLb.Size = new System.Drawing.Size(465, 204);
+            this.FakultelerLb.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.EkleButton);
@@ -65,35 +86,24 @@
             this.panel2.Size = new System.Drawing.Size(584, 100);
             this.panel2.TabIndex = 1;
             // 
-            // FakultelerLb
+            // EkleButton
             // 
-            this.FakultelerLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.FakultelerLb.FormattingEnabled = true;
-            this.FakultelerLb.ItemHeight = 25;
-            this.FakultelerLb.Location = new System.Drawing.Point(3, 3);
-            this.FakultelerLb.Name = "FakultelerLb";
-            this.FakultelerLb.Size = new System.Drawing.Size(465, 204);
-            this.FakultelerLb.TabIndex = 0;
+            this.EkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.EkleButton.Location = new System.Drawing.Point(477, 3);
+            this.EkleButton.Name = "EkleButton";
+            this.EkleButton.Size = new System.Drawing.Size(104, 93);
+            this.EkleButton.TabIndex = 2;
+            this.EkleButton.Text = "EKLE";
+            this.EkleButton.UseVisualStyleBackColor = true;
+            this.EkleButton.Click += new System.EventHandler(this.EkleButton_Click);
             // 
-            // secButton
+            // nameText
             // 
-            this.secButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.secButton.Location = new System.Drawing.Point(474, 10);
-            this.secButton.Name = "secButton";
-            this.secButton.Size = new System.Drawing.Size(107, 204);
-            this.secButton.TabIndex = 1;
-            this.secButton.Text = "Bolum Islemine Git";
-            this.secButton.UseVisualStyleBackColor = true;
-            // 
-            // fakId
-            // 
-            this.fakId.AutoSize = true;
-            this.fakId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.fakId.Location = new System.Drawing.Point(13, 20);
-            this.fakId.Name = "fakId";
-            this.fakId.Size = new System.Drawing.Size(133, 25);
-            this.fakId.TabIndex = 0;
-            this.fakId.Text = "Fakulte ID :";
+            this.nameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nameText.Location = new System.Drawing.Point(172, 56);
+            this.nameText.Name = "nameText";
+            this.nameText.Size = new System.Drawing.Size(296, 31);
+            this.nameText.TabIndex = 1;
             // 
             // IdText
             // 
@@ -113,24 +123,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Fakulte Ismi :";
             // 
-            // nameText
+            // fakId
             // 
-            this.nameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nameText.Location = new System.Drawing.Point(172, 56);
-            this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(296, 31);
-            this.nameText.TabIndex = 1;
-            // 
-            // EkleButton
-            // 
-            this.EkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.EkleButton.Location = new System.Drawing.Point(477, 3);
-            this.EkleButton.Name = "EkleButton";
-            this.EkleButton.Size = new System.Drawing.Size(104, 93);
-            this.EkleButton.TabIndex = 2;
-            this.EkleButton.Text = "EKLE";
-            this.EkleButton.UseVisualStyleBackColor = true;
-            this.EkleButton.Click += new System.EventHandler(this.EkleButton_Click);
+            this.fakId.AutoSize = true;
+            this.fakId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.fakId.Location = new System.Drawing.Point(13, 20);
+            this.fakId.Name = "fakId";
+            this.fakId.Size = new System.Drawing.Size(133, 25);
+            this.fakId.TabIndex = 0;
+            this.fakId.Text = "Fakulte ID :";
             // 
             // ExitBtn
             // 

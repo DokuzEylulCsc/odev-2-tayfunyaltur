@@ -20,7 +20,7 @@ namespace KayitSistemi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Refresh();
+            refresh();
         }
 
         private void ekleButton_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace KayitSistemi
                 try
                 {
                     Universite uni = new Universite(uniNameTxt.Text);
-                    Refresh();
+                    refresh();
                 }
                 catch (ArgumentException a)
                 {
@@ -40,7 +40,7 @@ namespace KayitSistemi
             
             
         }
-        public void Refresh()
+        public void refresh()
         {
             UniversitelerLB.Items.Clear();
             foreach (string a in Universite.GetUnis.Keys)

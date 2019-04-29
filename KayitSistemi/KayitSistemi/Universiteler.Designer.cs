@@ -32,8 +32,8 @@
             this.uniNameTxt = new System.Windows.Forms.TextBox();
             this.uniNameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.ekleButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -77,16 +77,6 @@
             this.panel1.Size = new System.Drawing.Size(601, 123);
             this.panel1.TabIndex = 3;
             // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.UniversitelerLB);
-            this.panel2.Location = new System.Drawing.Point(12, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(601, 233);
-            this.panel2.TabIndex = 4;
-            // 
             // ekleButton
             // 
             this.ekleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -97,6 +87,16 @@
             this.ekleButton.Text = "EKLE";
             this.ekleButton.UseVisualStyleBackColor = true;
             this.ekleButton.Click += new System.EventHandler(this.ekleButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.UniversitelerLB);
+            this.panel2.Location = new System.Drawing.Point(12, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(601, 233);
+            this.panel2.TabIndex = 4;
             // 
             // button1
             // 
@@ -118,7 +118,7 @@
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(87, 23);
             this.ExitBtn.TabIndex = 5;
-            this.ExitBtn.Text = "EXIT";
+            this.ExitBtn.Text = "CIKIS";
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 

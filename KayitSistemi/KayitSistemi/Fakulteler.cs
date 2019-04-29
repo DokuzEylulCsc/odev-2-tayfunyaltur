@@ -11,6 +11,8 @@ namespace KayitSistemi
 {
     public partial class Fakulteler : Form
     {
+        public static string fakName;
+        public static string fakID;
         public Fakulteler()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace KayitSistemi
             FakultelerLb.Items.Clear();
             foreach (Fakulte fak in Universite.GetUnis[Universiteler.UniName].GetDepartments.Values)
             {
-                FakultelerLb.Items.Add(fak.GetId + " ----> " + fak.GetName);
+                FakultelerLb.Items.Add(fak.GetId + "---->" + fak.GetName);
             }
             if (FakultelerLb.Items.Count == 0)
             {
@@ -42,18 +44,22 @@ namespace KayitSistemi
 
         private void EkleButton_Click(object sender, EventArgs e)
         {
-            try
+            if (IdText.Text != "" && nameText.Text != "")
             {
-                Universite.GetUnis[Universiteler.UniName].AddDepartment(IdText.Text, nameText.Text);
+                try
+                {
+                    Universite.GetUnis[Universiteler.UniName].AddDepartment(IdText.Text, nameText.Text);
+                }
+                catch (ArgumentException a)
+                {
+                    MessageBox.Show(a.Message);
+                }
+                finally
+                {
+                    refresh();
+                }
             }
-            catch (ArgumentException a)
-            {
-                MessageBox.Show(a.Message);
-            }
-            finally
-            {
-                refresh();
-            }
+           
             
         }
 
@@ -67,6 +73,30 @@ namespace KayitSistemi
             Universiteler universiteler = new Universiteler();
             universiteler.Show();
             this.Hide();
+        }
+
+        private void secButton_Click(object sender, EventArgs e)
+        {
+            fakID = "";
+            fakName = "";
+            int i = 0;
+            List<char> karakterler = new List<char>();
+            while (FakultelerLb.SelectedItem.ToString()[i]!= '-' && FakultelerLb.SelectedItem.ToString() != "")
+            {
+                
+                fakName += (FakultelerLb.SelectedItem.ToString()[i]);
+                i++;
+            }
+            fakID = fakName;
+            fakName = "";
+            for (int s = i + 4; s < FakultelerLb.SelectedItem.ToString().Length; s++)
+            {
+                fakName += FakultelerLb.SelectedItem.ToString()[s];
+            }
+            Bolumler bol = new Bolumler();
+            bol.Show();
+            this.Hide();
+
         }
     }
 }
