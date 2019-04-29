@@ -36,11 +36,6 @@ namespace KayitSistemi
                 return instructors;
             }
         }
-        public OgrentimUyesi HeadOfDepartment
-        {
-            get { return headOfDepartment; }
-            set { headOfDepartment = value; }
-        }
         public DProgram(string id,string name,string departmentId)
         {
             this.id = id;

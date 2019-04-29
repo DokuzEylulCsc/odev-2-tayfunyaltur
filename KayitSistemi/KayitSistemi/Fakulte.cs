@@ -7,8 +7,6 @@ namespace KayitSistemi
 {
     class Fakulte
     {
-        private static Dictionary<string, Fakulte> departments = new Dictionary<string, Fakulte>();
-        public static Dictionary<string, Fakulte> GetDepartments { get { return departments; } }
         private Dictionary<string, DProgram> programs = new Dictionary<string, DProgram>();
         public Dictionary<string,DProgram> GetPrograms { get { return programs; } }
         private string id;
