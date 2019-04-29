@@ -1,6 +1,6 @@
 ﻿namespace KayitSistemi
 {
-    partial class Form1
+    partial class Universiteler
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.

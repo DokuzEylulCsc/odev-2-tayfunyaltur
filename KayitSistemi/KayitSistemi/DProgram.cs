@@ -10,12 +10,13 @@ namespace KayitSistemi
     {
         private string name;
         private string id;
-        private List<Ogrenci> students;
-        private List<OgrentimUyesi> instructors;
-        private OgrentimUyesi headOfDepartment;
+        private string departmentId;
+        private Dictionary<string,Ogrenci> students=new Dictionary<string, Ogrenci>();
+        private Dictionary<string,OgrentimUyesi> instructors=new Dictionary<string, OgrentimUyesi>();
         private static Dictionary<string, DProgram> programs = new Dictionary<string, DProgram>();
         private Dictionary<string, Course> courses = new Dictionary<string, Course>();
         public Dictionary<string,Course>  GetCourses { get { return courses; } }
+        public string GetDepartment { get{ return departmentId; } }
         public string GetName
         {
             get { return name; }
@@ -24,11 +25,11 @@ namespace KayitSistemi
         {
             get { return id; }
         }
-        public List<Ogrenci> GetSutdents
+        public Dictionary<string,Ogrenci> GetSutdents
         {
             get { return students; }
         }
-        public List<OgrentimUyesi> GetInstructors
+        public Dictionary<string,OgrentimUyesi> GetInstructors
         {
             get
             {
@@ -39,6 +40,20 @@ namespace KayitSistemi
         {
             get { return headOfDepartment; }
             set { headOfDepartment = value; }
+        }
+        public DProgram(string id,string name,string departmentId)
+        {
+            this.id = id;
+            this.name = name;
+            this.departmentId = departmentId;
+            try
+            {
+                programs.Add(id, this);
+            }
+            catch
+            {
+
+            }
         }
         public void AddCourse(Course c)
         {
@@ -74,7 +89,11 @@ namespace KayitSistemi
         }
         public void AddCourse(string key,string name,string lang,int workload,OgrentimUyesi ins)
         {
-            Course c = new Course(key, name, lang, workload, ins);
+            Course c = new Course(key, name, lang, workload, ins,this.id);
+            if (!instructors.ContainsValue(ins))
+            {
+                instructors.Add(ins.GetName + ins.GetSurname, ins);
+            }
             try
             {
                 courses.Add(c.GetID, c);
@@ -85,10 +104,16 @@ namespace KayitSistemi
 
             }
         } // ogretmen mevcut ise 
-        public void AddCourse(string key, string name, string lang, int workload,string oName , string oSurnme)
+        public void AddCourse(string key, string name, string lang, int workload,string oName , string oSurnme,string oID)
         {
-            OgrentimUyesi ins = new OgrentimUyesi(oName, oSurnme);
-            Course c = new Course(key, name, lang, workload, ins);
+            OgrentimUyesi ins = new OgrentimUyesi(oName, oSurnme,oID);
+
+            Course c = new Course(key, name, lang, workload, ins,this.id);
+
+            if (!instructors.ContainsKey(oID))
+            {
+                instructors.Add(ins.GetID, ins);
+            }
             try
             {
                 courses.Add(c.GetID, c);
@@ -99,5 +124,33 @@ namespace KayitSistemi
 
             }
         }  // ogretmen de yeni eklenicek ise
+        public void AddIns(string name ,string surname,string id)
+        {
+            try
+            {
+                instructors.Add(id, new OgrentimUyesi(name, surname, id));
+            }
+            catch(ArgumentException e)
+            {
+                MessageBox.Show("Bu ogretim uyesi zaten ekli ya da ayni idye sahip baska bir ogretim uyesi var");
+            }
+            
+        }
+        public void AddIns(OgrentimUyesi ins)
+        {
+            instructors.Add(ins.GetID, ins);
+        }
+        public void AddLisans(string id,string name,string surname)
+        {
+            students.Add(id, new LisansOgrenci(name, surname, departmentId,this.name,id));
+        }
+        public void AddYuksek(string id,string name,string surname)
+        {
+            students.Add(id, new YuksekLisansOgrenci(name, surname, departmentId, this.name,id));
+        }
+        public void AddDoktora(string id, string name, string surname)
+        {
+            students.Add(id, new DoktoraOgrenci(name, surname, departmentId, this.name, id));
+        }
     }
 }

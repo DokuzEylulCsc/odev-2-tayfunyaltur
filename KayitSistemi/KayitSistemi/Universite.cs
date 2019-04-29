@@ -7,15 +7,19 @@ namespace KayitSistemi
 {
     class Universite
     {
-        protected string name;
+        private string name;
+        private Dictionary<string, Universite> unis = new Dictionary<string, Universite>();
+        public Dictionary<string, Universite> GetUnis { get { return unis; } }
+        private Dictionary<string, Fakulte> departments = new Dictionary<string, Fakulte>();
+        public Dictionary<string, Fakulte> GetDepartments { get { return departments; } }
         public string GetName
         {
             get { return name; }
         }
 
-        public void AddDepartment()
+        public void AddDepartment(string id,string name)
         {
-            /* fakulte ekleme impelemtleri */
+            departments.Add(id, new Fakulte(id, name));
         }
     }
 }

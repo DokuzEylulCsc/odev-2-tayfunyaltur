@@ -7,14 +7,8 @@ namespace KayitSistemi
 {
     class LisansOgrenci:Ogrenci
     {
-        public LisansOgrenci(string name,string surname , string department , string program) : base(name, surname, department, program)
+        public LisansOgrenci(string name,string surname , string department , string program,string id) : base(name, surname, department, program,id)
         {
-            lisansOgrencileri.Add(this);
         }
-        public LisansOgrenci(string name, string surname, string department, string program,int GNO) : base(name, surname, department, program,GNO)
-        {
-            lisansOgrencileri.Add(this);
-        }
-        public static List<LisansOgrenci> lisansOgrencileri = new List<LisansOgrenci>();
     }
 }
