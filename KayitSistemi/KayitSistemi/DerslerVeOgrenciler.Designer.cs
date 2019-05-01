@@ -71,6 +71,7 @@
             this.SubeIslemleri.TabIndex = 1;
             this.SubeIslemleri.Text = "Sube Islemleri";
             this.SubeIslemleri.UseVisualStyleBackColor = true;
+            this.SubeIslemleri.Click += new System.EventHandler(this.SubeIslemleri_Click);
             // 
             // DersCikar
             // 
@@ -100,6 +101,7 @@
             this.DerslerLb.Name = "DerslerLb";
             this.DerslerLb.Size = new System.Drawing.Size(168, 404);
             this.DerslerLb.TabIndex = 0;
+            this.DerslerLb.SelectedIndexChanged += new System.EventHandler(this.DerslerLb_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -119,8 +121,9 @@
             this.OgretimBilg.Name = "OgretimBilg";
             this.OgretimBilg.Size = new System.Drawing.Size(91, 79);
             this.OgretimBilg.TabIndex = 1;
-            this.OgretimBilg.Text = "Ogr.Gov. Bilgileri";
+            this.OgretimBilg.Text = "Ogr.Gor. Bilgileri";
             this.OgretimBilg.UseVisualStyleBackColor = true;
+            this.OgretimBilg.Click += new System.EventHandler(this.OgretimBilg_Click);
             // 
             // OgretimG
             // 
@@ -137,8 +140,9 @@
             this.OgretimCikar.Name = "OgretimCikar";
             this.OgretimCikar.Size = new System.Drawing.Size(91, 79);
             this.OgretimCikar.TabIndex = 1;
-            this.OgretimCikar.Text = "Ogr.Gov. Cikar";
+            this.OgretimCikar.Text = "Ogr.Gor. Cikar";
             this.OgretimCikar.UseVisualStyleBackColor = true;
+            this.OgretimCikar.Click += new System.EventHandler(this.OgretimCikar_Click);
             // 
             // OgretimEkle
             // 
@@ -146,8 +150,9 @@
             this.OgretimEkle.Name = "OgretimEkle";
             this.OgretimEkle.Size = new System.Drawing.Size(91, 79);
             this.OgretimEkle.TabIndex = 1;
-            this.OgretimEkle.Text = "Ogr.Gov. Ekle";
+            this.OgretimEkle.Text = "Ogr.Gor. Ekle";
             this.OgretimEkle.UseVisualStyleBackColor = true;
+            this.OgretimEkle.Click += new System.EventHandler(this.OgretimEkle_Click);
             // 
             // panel3
             // 
@@ -169,6 +174,7 @@
             this.OgrenciBilg.TabIndex = 1;
             this.OgrenciBilg.Text = "Ogrenci Bilgileri";
             this.OgrenciBilg.UseVisualStyleBackColor = true;
+            this.OgrenciBilg.Click += new System.EventHandler(this.OgrenciBilg_Click);
             // 
             // Ogrenciler
             // 
@@ -187,6 +193,7 @@
             this.ogrenciEkle.TabIndex = 1;
             this.ogrenciEkle.Text = "Ogrenci Ekle";
             this.ogrenciEkle.UseVisualStyleBackColor = true;
+            this.ogrenciEkle.Click += new System.EventHandler(this.ogrenciEkle_Click);
             // 
             // ogrenciCikar
             // 
@@ -196,6 +203,7 @@
             this.ogrenciCikar.TabIndex = 1;
             this.ogrenciCikar.Text = "Ogrenci Cikar";
             this.ogrenciCikar.UseVisualStyleBackColor = true;
+            this.ogrenciCikar.Click += new System.EventHandler(this.ogrenciCikar_Click);
             // 
             // label1
             // 

@@ -66,18 +66,7 @@ namespace KayitSistemi
         {
             courses.Remove(c.GetID); // silinmek istenen dersin idsine erisip siler
         }
-        public void AddCourse(string key)
-        {
-            try
-            {
-                courses.Add(Course.Courses[key].GetID, Course.Courses[key]);// eger dersin idsi ile ekleme yapilmak istenirse
-            }
-            catch(ArgumentException e)
-            {
-                MessageBox.Show("Ayni dersi iki kere ekleyemezsiniz");
-            }
-            
-        }
+        
         public void RemoveCourse(string key)
         {
             courses.Remove(key);
@@ -117,25 +106,71 @@ namespace KayitSistemi
             }
             catch(ArgumentException e)
             {
-                MessageBox.Show("Bu ogretim uyesi zaten ekli ya da ayni idye sahip baska bir ogretim uyesi var");
+                throw new ArgumentException("Bu ogretim uyesi zaten ekli ya da ayni idye sahip baska bir ogretim uyesi var");
             }
             
         }
         public void AddIns(OgrentimUyesi ins)
         {
-            instructors.Add(ins.GetID, ins);
+            try
+            {
+                instructors.Add(ins.GetID, ins);
+            }
+            catch (ArgumentException e)
+            {
+                throw new ArgumentException("Bu ogretim uyesi zaten ekli ya da ayni idye sahip baska bir ogretim uyesi var");
+            }
+
+            
         }
         public void AddLisans(string id,string name,string surname)
         {
-            students.Add(id, new LisansOgrenci(name, surname, departmentId,this.name,id));
+            try
+            {
+                students.Add(id, new LisansOgrenci(name, surname, departmentId, this.name, id));
+            }
+            catch(ArgumentException e)
+            {
+                throw new ArgumentException("Bu idye sahip ogrenci daha once eklendi");
+            }
+            
         }
         public void AddYuksek(string id,string name,string surname)
         {
-            students.Add(id, new YuksekLisansOgrenci(name, surname, departmentId, this.name,id));
+            try
+            {
+                students.Add(id, new YuksekLisansOgrenci(name, surname, departmentId, this.name, id));
+            }
+            catch (ArgumentException e)
+            {
+                throw new ArgumentException("Bu idye sahip ogrenci daha once eklendi");
+            }
         }
         public void AddDoktora(string id, string name, string surname)
         {
-            students.Add(id, new DoktoraOgrenci(name, surname, departmentId, this.name, id));
+            try
+            {
+                students.Add(id, new DoktoraOgrenci(name, surname, departmentId, this.name, id));
+            }
+            catch (ArgumentException e)
+            {
+                throw new ArgumentException("Bu idye sahip ogrenci daha once eklendi");
+            }
+        }
+        public void RemoveIns(OgrentimUyesi c)
+        {
+            try
+            {
+                instructors.Remove(c.GetID);
+            }
+            catch
+            {
+                throw new Exception("Bir hata olustu");
+            }
+        }
+        public void RemoveStudent(string ID)
+        {
+            students.Remove(ID);
         }
     }
 }

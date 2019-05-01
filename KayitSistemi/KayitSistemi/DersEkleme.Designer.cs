@@ -38,6 +38,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -124,11 +125,21 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(95, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(175, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Ders Ekleme Sayfasi";
+            // 
             // DersEkleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 320);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.textBox4);
@@ -162,5 +173,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -72,7 +72,44 @@
     <Compile Include="Fakulteler.Designer.cs">
       <DependentUpon>Fakulteler.cs</DependentUpon>
     </Compile>
+    <Compile Include="HAOEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HAOEkleme.Designer.cs">
+      <DependentUpon>HAOEkleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="LisansOgrenci.cs" />
+    <Compile Include="OgrenciBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciBilgileri.Designer.cs">
+      <DependentUpon>OgrenciBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciEkle.Designer.cs">
+      <DependentUpon>OgrenciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgretimGorevlisiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgretimGorevlisiEkle.Designer.cs">
+      <DependentUpon>OgretimGorevlisiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubeEkle.Designer.cs">
+      <DependentUpon>SubeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubeIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubeIslemleri.Designer.cs">
+      <DependentUpon>SubeIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subeler.cs" />
     <Compile Include="Universiteler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +133,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fakulteler.resx">
       <DependentUpon>Fakulteler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HAOEkleme.resx">
+      <DependentUpon>HAOEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciBilgileri.resx">
+      <DependentUpon>OgrenciBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciEkle.resx">
+      <DependentUpon>OgrenciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgretimGorevlisiEkle.resx">
+      <DependentUpon>OgretimGorevlisiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubeEkle.resx">
+      <DependentUpon>SubeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubeIslemleri.resx">
+      <DependentUpon>SubeIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Universiteler.resx">
       <DependentUpon>Universiteler.cs</DependentUpon>

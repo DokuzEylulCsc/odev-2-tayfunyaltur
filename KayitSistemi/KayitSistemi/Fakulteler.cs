@@ -77,25 +77,29 @@ namespace KayitSistemi
 
         private void secButton_Click(object sender, EventArgs e)
         {
-            fakID = "";
-            fakName = "";
-            int i = 0;
-            List<char> karakterler = new List<char>();
-            while (FakultelerLb.SelectedItem.ToString()[i]!= '-' && FakultelerLb.SelectedItem.ToString() != "")
+            if (FakultelerLb.SelectedItem != null)
             {
-                
-                fakName += (FakultelerLb.SelectedItem.ToString()[i]);
-                i++;
+                fakID = "";
+                fakName = "";
+                int i = 0;
+                List<char> karakterler = new List<char>();
+                while (FakultelerLb.SelectedItem.ToString()[i] != '-' && FakultelerLb.SelectedItem.ToString() != "")
+                {
+
+                    fakName += (FakultelerLb.SelectedItem.ToString()[i]);
+                    i++;
+                }
+                fakID = fakName;
+                fakName = "";
+                for (int s = i + 5; s < FakultelerLb.SelectedItem.ToString().Length; s++)
+                {
+                    fakName += FakultelerLb.SelectedItem.ToString()[s];
+                }
+                Bolumler bol = new Bolumler();
+                bol.Show();
+                this.Hide();
             }
-            fakID = fakName;
-            fakName = "";
-            for (int s = i + 5; s < FakultelerLb.SelectedItem.ToString().Length; s++)
-            {
-                fakName += FakultelerLb.SelectedItem.ToString()[s];
-            }
-            Bolumler bol = new Bolumler();
-            bol.Show();
-            this.Hide();
+           
 
         }
     }

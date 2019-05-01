@@ -76,7 +76,7 @@ namespace KayitSistemi
         private void secButton_Click(object sender, EventArgs e)
         {
             int i = 0;
-            if (BolumlerLb.SelectedItem.ToString() != "")
+            if (BolumlerLb.SelectedItem != null)
             {
                 while (BolumlerLb.SelectedItem.ToString()[i] != '-' && BolumlerLb.SelectedItem.ToString() != "")
                 {

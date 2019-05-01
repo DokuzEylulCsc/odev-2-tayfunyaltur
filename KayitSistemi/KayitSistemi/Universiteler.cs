@@ -59,13 +59,17 @@ namespace KayitSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UniName = UniversitelerLB.SelectedItem.ToString();
-            if (UniName != "")
+            if (UniversitelerLB.SelectedItem != null)
             {
-                Fakulteler fak = new Fakulteler();
-                fak.Show();
-                this.Hide();
+                UniName = UniversitelerLB.SelectedItem.ToString();
+                if (UniName != "")
+                {
+                    Fakulteler fak = new Fakulteler();
+                    fak.Show();
+                    this.Hide();
+                }
             }
+            
             
 
         }

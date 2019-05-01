@@ -6,11 +6,10 @@ using System.Windows.Forms;
 
 namespace KayitSistemi
 {
-    abstract class Ogrenci
+    public abstract class Ogrenci
     {
         protected static int OgrenciSayisi = 0;
         public static int ogrenciSayisi{get{return OgrenciSayisi;} set{OgrenciSayisi=value;} }
-        public static Dictionary<string, Ogrenci> Ogrenciler = new Dictionary<string, Ogrenci>();
         protected string id;
         protected string name, surname, department, program;
         public string GetName { get { return name; } }
@@ -26,15 +25,6 @@ namespace KayitSistemi
             this.surname = surname;
             this.department = department;
             this.program = program;
-            try
-            {
-                Ogrenciler.Add(this.id, this);
-            }
-            catch (ArgumentException e)
-            {
-                MessageBox.Show("ayni idli iki ogrenci kaydedilemez");
-                throw new ArgumentException();
-            }
             OgrenciSayisi++;
         }
         
