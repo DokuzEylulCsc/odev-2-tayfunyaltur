@@ -23,14 +23,13 @@ namespace KayitSistemi
         public OgrentimUyesi MainInstructor { get { return mainInstructor; } set { mainInstructor = value; } }
         public static Dictionary<string, Course> Courses { get { return courses; } }
 
-        public Course(string id, string name , string language , int workload,OgrentimUyesi mainInstructor,string departmentId)
+        public Course(string id, string name , string language , int workload,string departmentId)
         {
             this.departmentId = departmentId;
             this.id = id;
             this.name = name;
             this.language = language;
             this.workload = workload;
-            this.mainInstructor = mainInstructor;
         }
 
         public void AddStudent(Ogrenci stu)

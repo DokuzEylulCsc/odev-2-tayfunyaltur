@@ -11,6 +11,8 @@ namespace KayitSistemi
 {
     public partial class Bolumler : Form
     {
+        public static string bolumName;
+        public static string bolumId;
         public Bolumler()
         {
             InitializeComponent();
@@ -18,7 +20,9 @@ namespace KayitSistemi
 
         private void Bolumler_Load(object sender, EventArgs e)
         {
-            label1.Text = Universiteler.UniName + " Universitesi" + Fakulteler.fakName + " Fakultesi";
+            bolumId = "";
+            bolumName = "";
+            label1.Text = Universiteler.UniName + " Universitesi " + Fakulteler.fakName + " Fakultesi";
             refresh();
         }
 
@@ -67,6 +71,31 @@ namespace KayitSistemi
             }
             
            
+        }
+
+        private void secButton_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            if (BolumlerLb.SelectedItem.ToString() != "")
+            {
+                while (BolumlerLb.SelectedItem.ToString()[i] != '-' && BolumlerLb.SelectedItem.ToString() != "")
+                {
+
+                    bolumName += (BolumlerLb.SelectedItem.ToString()[i]);
+                    i++;
+                }
+                bolumId = bolumName;
+                bolumName = "";
+                for (int s = i + 4; s < BolumlerLb.SelectedItem.ToString().Length; s++)
+                {
+                    bolumName += BolumlerLb.SelectedItem.ToString()[s];
+                }
+
+
+                DerslerVeOgrenciler dvo = new DerslerVeOgrenciler();
+                dvo.Show();
+                this.Hide();
+            }
         }
     }
 }

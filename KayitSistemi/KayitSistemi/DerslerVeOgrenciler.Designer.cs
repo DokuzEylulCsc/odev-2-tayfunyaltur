@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.DerslerLb = new System.Windows.Forms.ListBox();
-            this.OgretimG = new System.Windows.Forms.ListBox();
-            this.Ogrenciler = new System.Windows.Forms.ListBox();
-            this.DersEkle = new System.Windows.Forms.Button();
-            this.DersCikar = new System.Windows.Forms.Button();
             this.SubeIslemleri = new System.Windows.Forms.Button();
-            this.OgretimEkle = new System.Windows.Forms.Button();
-            this.OgretimCikar = new System.Windows.Forms.Button();
+            this.DersCikar = new System.Windows.Forms.Button();
+            this.DersEkle = new System.Windows.Forms.Button();
+            this.DerslerLb = new System.Windows.Forms.ListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.OgretimBilg = new System.Windows.Forms.Button();
+            this.OgretimG = new System.Windows.Forms.ListBox();
+            this.OgretimCikar = new System.Windows.Forms.Button();
+            this.OgretimEkle = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.OgrenciBilg = new System.Windows.Forms.Button();
+            this.Ogrenciler = new System.Windows.Forms.ListBox();
             this.ogrenciEkle = new System.Windows.Forms.Button();
             this.ogrenciCikar = new System.Windows.Forms.Button();
-            this.OgrenciBilg = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,6 +63,44 @@
             this.panel1.Size = new System.Drawing.Size(273, 406);
             this.panel1.TabIndex = 0;
             // 
+            // SubeIslemleri
+            // 
+            this.SubeIslemleri.Location = new System.Drawing.Point(178, 174);
+            this.SubeIslemleri.Name = "SubeIslemleri";
+            this.SubeIslemleri.Size = new System.Drawing.Size(91, 79);
+            this.SubeIslemleri.TabIndex = 1;
+            this.SubeIslemleri.Text = "Sube Islemleri";
+            this.SubeIslemleri.UseVisualStyleBackColor = true;
+            // 
+            // DersCikar
+            // 
+            this.DersCikar.Location = new System.Drawing.Point(178, 89);
+            this.DersCikar.Name = "DersCikar";
+            this.DersCikar.Size = new System.Drawing.Size(91, 79);
+            this.DersCikar.TabIndex = 1;
+            this.DersCikar.Text = "Ders Cikar";
+            this.DersCikar.UseVisualStyleBackColor = true;
+            this.DersCikar.Click += new System.EventHandler(this.DersCikar_Click);
+            // 
+            // DersEkle
+            // 
+            this.DersEkle.Location = new System.Drawing.Point(179, 4);
+            this.DersEkle.Name = "DersEkle";
+            this.DersEkle.Size = new System.Drawing.Size(91, 79);
+            this.DersEkle.TabIndex = 1;
+            this.DersEkle.Text = "Ders Ekle";
+            this.DersEkle.UseVisualStyleBackColor = true;
+            this.DersEkle.Click += new System.EventHandler(this.DersEkle_Click);
+            // 
+            // DerslerLb
+            // 
+            this.DerslerLb.FormattingEnabled = true;
+            this.DerslerLb.ItemHeight = 20;
+            this.DerslerLb.Location = new System.Drawing.Point(4, 4);
+            this.DerslerLb.Name = "DerslerLb";
+            this.DerslerLb.Size = new System.Drawing.Size(168, 404);
+            this.DerslerLb.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.OgretimBilg);
@@ -71,6 +112,42 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(273, 406);
             this.panel2.TabIndex = 1;
+            // 
+            // OgretimBilg
+            // 
+            this.OgretimBilg.Location = new System.Drawing.Point(176, 174);
+            this.OgretimBilg.Name = "OgretimBilg";
+            this.OgretimBilg.Size = new System.Drawing.Size(91, 79);
+            this.OgretimBilg.TabIndex = 1;
+            this.OgretimBilg.Text = "Ogr.Gov. Bilgileri";
+            this.OgretimBilg.UseVisualStyleBackColor = true;
+            // 
+            // OgretimG
+            // 
+            this.OgretimG.FormattingEnabled = true;
+            this.OgretimG.ItemHeight = 20;
+            this.OgretimG.Location = new System.Drawing.Point(3, 3);
+            this.OgretimG.Name = "OgretimG";
+            this.OgretimG.Size = new System.Drawing.Size(168, 404);
+            this.OgretimG.TabIndex = 0;
+            // 
+            // OgretimCikar
+            // 
+            this.OgretimCikar.Location = new System.Drawing.Point(176, 89);
+            this.OgretimCikar.Name = "OgretimCikar";
+            this.OgretimCikar.Size = new System.Drawing.Size(91, 79);
+            this.OgretimCikar.TabIndex = 1;
+            this.OgretimCikar.Text = "Ogr.Gov. Cikar";
+            this.OgretimCikar.UseVisualStyleBackColor = true;
+            // 
+            // OgretimEkle
+            // 
+            this.OgretimEkle.Location = new System.Drawing.Point(177, 4);
+            this.OgretimEkle.Name = "OgretimEkle";
+            this.OgretimEkle.Size = new System.Drawing.Size(91, 79);
+            this.OgretimEkle.TabIndex = 1;
+            this.OgretimEkle.Text = "Ogr.Gov. Ekle";
+            this.OgretimEkle.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -84,23 +161,14 @@
             this.panel3.Size = new System.Drawing.Size(273, 406);
             this.panel3.TabIndex = 1;
             // 
-            // DerslerLb
+            // OgrenciBilg
             // 
-            this.DerslerLb.FormattingEnabled = true;
-            this.DerslerLb.ItemHeight = 20;
-            this.DerslerLb.Location = new System.Drawing.Point(4, 4);
-            this.DerslerLb.Name = "DerslerLb";
-            this.DerslerLb.Size = new System.Drawing.Size(168, 404);
-            this.DerslerLb.TabIndex = 0;
-            // 
-            // OgretimG
-            // 
-            this.OgretimG.FormattingEnabled = true;
-            this.OgretimG.ItemHeight = 20;
-            this.OgretimG.Location = new System.Drawing.Point(3, 3);
-            this.OgretimG.Name = "OgretimG";
-            this.OgretimG.Size = new System.Drawing.Size(168, 404);
-            this.OgretimG.TabIndex = 0;
+            this.OgrenciBilg.Location = new System.Drawing.Point(176, 174);
+            this.OgrenciBilg.Name = "OgrenciBilg";
+            this.OgrenciBilg.Size = new System.Drawing.Size(91, 79);
+            this.OgrenciBilg.TabIndex = 1;
+            this.OgrenciBilg.Text = "Ogrenci Bilgileri";
+            this.OgrenciBilg.UseVisualStyleBackColor = true;
             // 
             // Ogrenciler
             // 
@@ -110,60 +178,6 @@
             this.Ogrenciler.Name = "Ogrenciler";
             this.Ogrenciler.Size = new System.Drawing.Size(168, 404);
             this.Ogrenciler.TabIndex = 0;
-            // 
-            // DersEkle
-            // 
-            this.DersEkle.Location = new System.Drawing.Point(179, 4);
-            this.DersEkle.Name = "DersEkle";
-            this.DersEkle.Size = new System.Drawing.Size(91, 79);
-            this.DersEkle.TabIndex = 1;
-            this.DersEkle.Text = "Ders Ekle";
-            this.DersEkle.UseVisualStyleBackColor = true;
-            // 
-            // DersCikar
-            // 
-            this.DersCikar.Location = new System.Drawing.Point(178, 89);
-            this.DersCikar.Name = "DersCikar";
-            this.DersCikar.Size = new System.Drawing.Size(91, 79);
-            this.DersCikar.TabIndex = 1;
-            this.DersCikar.Text = "Ders Cikar";
-            this.DersCikar.UseVisualStyleBackColor = true;
-            // 
-            // SubeIslemleri
-            // 
-            this.SubeIslemleri.Location = new System.Drawing.Point(178, 174);
-            this.SubeIslemleri.Name = "SubeIslemleri";
-            this.SubeIslemleri.Size = new System.Drawing.Size(91, 79);
-            this.SubeIslemleri.TabIndex = 1;
-            this.SubeIslemleri.Text = "Sube Islemleri";
-            this.SubeIslemleri.UseVisualStyleBackColor = true;
-            // 
-            // OgretimEkle
-            // 
-            this.OgretimEkle.Location = new System.Drawing.Point(177, 4);
-            this.OgretimEkle.Name = "OgretimEkle";
-            this.OgretimEkle.Size = new System.Drawing.Size(91, 79);
-            this.OgretimEkle.TabIndex = 1;
-            this.OgretimEkle.Text = "Ogr.Gov. Ekle";
-            this.OgretimEkle.UseVisualStyleBackColor = true;
-            // 
-            // OgretimCikar
-            // 
-            this.OgretimCikar.Location = new System.Drawing.Point(176, 89);
-            this.OgretimCikar.Name = "OgretimCikar";
-            this.OgretimCikar.Size = new System.Drawing.Size(91, 79);
-            this.OgretimCikar.TabIndex = 1;
-            this.OgretimCikar.Text = "Ogr.Gov. Cikar";
-            this.OgretimCikar.UseVisualStyleBackColor = true;
-            // 
-            // OgretimBilg
-            // 
-            this.OgretimBilg.Location = new System.Drawing.Point(176, 174);
-            this.OgretimBilg.Name = "OgretimBilg";
-            this.OgretimBilg.Size = new System.Drawing.Size(91, 79);
-            this.OgretimBilg.TabIndex = 1;
-            this.OgretimBilg.Text = "Ogr.Gov. Bilgileri";
-            this.OgretimBilg.UseVisualStyleBackColor = true;
             // 
             // ogrenciEkle
             // 
@@ -183,20 +197,50 @@
             this.ogrenciCikar.Text = "Ogrenci Cikar";
             this.ogrenciCikar.UseVisualStyleBackColor = true;
             // 
-            // OgrenciBilg
+            // label1
             // 
-            this.OgrenciBilg.Location = new System.Drawing.Point(176, 174);
-            this.OgrenciBilg.Name = "OgrenciBilg";
-            this.OgrenciBilg.Size = new System.Drawing.Size(91, 79);
-            this.OgrenciBilg.TabIndex = 1;
-            this.OgrenciBilg.Text = "Ogrenci Bilgileri";
-            this.OgrenciBilg.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(113, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExitBtn.Location = new System.Drawing.Point(800, 3);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(87, 23);
+            this.ExitBtn.TabIndex = 7;
+            this.ExitBtn.Text = "CIKIS";
+            this.ExitBtn.UseVisualStyleBackColor = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(12, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Geri";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DerslerVeOgrenciler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -204,10 +248,12 @@
             this.Name = "DerslerVeOgrenciler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DerslerVeOgrenciler";
+            this.Load += new System.EventHandler(this.DerslerVeOgrenciler_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -228,5 +274,8 @@
         private System.Windows.Forms.ListBox Ogrenciler;
         private System.Windows.Forms.Button ogrenciEkle;
         private System.Windows.Forms.Button ogrenciCikar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

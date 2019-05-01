@@ -82,43 +82,33 @@ namespace KayitSistemi
         {
             courses.Remove(key);
         }
-        public void AddCourse(string key,string name,string lang,int workload,OgrentimUyesi ins)
+        public void AddCourse(string key,string name,string lang,int workload)
         {
-            Course c = new Course(key, name, lang, workload, ins,this.id);
-            if (!instructors.ContainsValue(ins))
-            {
-                instructors.Add(ins.GetName + ins.GetSurname, ins);
-            }
+            Course c = new Course(key, name, lang, workload,this.id);
             try
             {
                 courses.Add(c.GetID, c);
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("ayni dersi iki kere ekleyemezsiniz");
+                throw new ArgumentException("bu ders kodu daha once eklenmis");
 
             }
-        } // ogretmen mevcut ise 
-        public void AddCourse(string key, string name, string lang, int workload,string oName , string oSurnme,string oID)
+        } 
+        public void AddCourse(string key, string name, string lang, int workload,string oName )
         {
-            OgrentimUyesi ins = new OgrentimUyesi(oName, oSurnme,oID);
 
-            Course c = new Course(key, name, lang, workload, ins,this.id);
-
-            if (!instructors.ContainsKey(oID))
-            {
-                instructors.Add(ins.GetID, ins);
-            }
+            Course c = new Course(key, name, lang, workload,this.id);
             try
             {
                 courses.Add(c.GetID, c);
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("ayni dersi iki kere ekleyemezsiniz");
+                throw new ArgumentException("bu ders kodu daha once eklenmis");
 
             }
-        }  // ogretmen de yeni eklenicek ise
+        }
         public void AddIns(string name ,string surname,string id)
         {
             try

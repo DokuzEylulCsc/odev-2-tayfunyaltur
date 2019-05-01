@@ -26,7 +26,7 @@ namespace KayitSistemi
 
         public void refresh()
         {
-            label1.Text = Universiteler.UniName+" Universitesi";
+            label1.Text = Universiteler.UniName+" Universitesi ";
             FakultelerLb.Items.Clear();
             foreach (Fakulte fak in Universite.GetUnis[Universiteler.UniName].GetDepartments.Values)
             {
@@ -89,7 +89,7 @@ namespace KayitSistemi
             }
             fakID = fakName;
             fakName = "";
-            for (int s = i + 4; s < FakultelerLb.SelectedItem.ToString().Length; s++)
+            for (int s = i + 5; s < FakultelerLb.SelectedItem.ToString().Length; s++)
             {
                 fakName += FakultelerLb.SelectedItem.ToString()[s];
             }

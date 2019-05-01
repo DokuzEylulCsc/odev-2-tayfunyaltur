@@ -51,6 +51,12 @@
       <DependentUpon>Bolumler.cs</DependentUpon>
     </Compile>
     <Compile Include="Course.cs" />
+    <Compile Include="DersEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersEkleme.Designer.cs">
+      <DependentUpon>DersEkleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="DerslerVeOgrenciler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="YuksekLisansOgrenci.cs" />
     <EmbeddedResource Include="Bolumler.resx">
       <DependentUpon>Bolumler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DersEkleme.resx">
+      <DependentUpon>DersEkleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DerslerVeOgrenciler.resx">
       <DependentUpon>DerslerVeOgrenciler.cs</DependentUpon>
