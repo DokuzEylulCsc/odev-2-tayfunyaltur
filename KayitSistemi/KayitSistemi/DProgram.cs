@@ -61,17 +61,17 @@ namespace KayitSistemi
                 MessageBox.Show("Ayni kurstan iki tane ekleyemezsiniz");
             }
             
-        }
+        } // kurs ekler
         public void RemoveCourse(Course c)
         {
             courses.Remove(c.GetID); // silinmek istenen dersin idsine erisip siler
-        }
+        } // kurs cikarir
         
         public void RemoveCourse(string key)
         {
             courses.Remove(key);
-        }
-        public void AddCourse(string key,string name,string lang,int workload)
+        } // id ile kurs cikarir
+        public void AddCourse(string key,string name,string lang,int workload) // yeni kurs olusturup ekler
         {
             Course c = new Course(key, name, lang, workload,this.id);
             try
@@ -109,8 +109,8 @@ namespace KayitSistemi
                 throw new ArgumentException("Bu ogretim uyesi zaten ekli ya da ayni idye sahip baska bir ogretim uyesi var");
             }
             
-        }
-        public void AddIns(OgrentimUyesi ins)
+        } // yeni ogrtim gorevlisi olusturup ekler
+        public void AddIns(OgrentimUyesi ins) // hazirda olusturulmus ogretim uyesi ekler
         {
             try
             {
@@ -123,7 +123,7 @@ namespace KayitSistemi
 
             
         }
-        public void AddLisans(string id,string name,string surname)
+        public void AddLisans(string id,string name,string surname) // lisans ogrencisi ekler
         {
             try
             {
@@ -135,7 +135,7 @@ namespace KayitSistemi
             }
             
         }
-        public void AddYuksek(string id,string name,string surname)
+        public void AddYuksek(string id,string name,string surname) // yuksek lisans ogrencisi ekler
         {
             try
             {
@@ -146,7 +146,7 @@ namespace KayitSistemi
                 throw new ArgumentException("Bu idye sahip ogrenci daha once eklendi");
             }
         }
-        public void AddDoktora(string id, string name, string surname)
+        public void AddDoktora(string id, string name, string surname) // doktora ogrencisi ekler
         {
             try
             {
@@ -157,7 +157,7 @@ namespace KayitSistemi
                 throw new ArgumentException("Bu idye sahip ogrenci daha once eklendi");
             }
         }
-        public void RemoveIns(OgrentimUyesi c)
+        public void RemoveIns(OgrentimUyesi c) // ogretim uyesini cikartir
         {
             try
             {
@@ -168,7 +168,7 @@ namespace KayitSistemi
                 throw new Exception("Bir hata olustu");
             }
         }
-        public void RemoveStudent(string ID)
+        public void RemoveStudent(string ID) // ogrenci cikartir ( lisan,yuksek lisans,doktora fark etmeksizin)
         {
             students.Remove(ID);
         }

@@ -7,9 +7,9 @@ namespace KayitSistemi
 {
     class Universite
     {
-        private string name;
-        private static Dictionary<string, Universite> unis = new Dictionary<string, Universite>();
-        public static Dictionary<string, Universite> GetUnis { get { return unis; } }
+        private string name;// universitenin ismi
+        private static Dictionary<string, Universite> unis = new Dictionary<string, Universite>(); // butun universiteleri tutucak Static sozluk
+        public static Dictionary<string, Universite> GetUnis { get { return unis; } } // kapsulleme
         private Dictionary<string, Fakulte> departments = new Dictionary<string, Fakulte>();
         public Dictionary<string, Fakulte> GetDepartments { get { return departments; } }
         public string GetName
@@ -27,7 +27,7 @@ namespace KayitSistemi
                 throw new ArgumentException("ayni isimde iki farkli universie bulunamaz");
             }
         }
-        public void AddDepartment(string id,string name)
+        public void AddDepartment(string id,string name) // departman ekleme eger ekliyese messagebox da gosterilecek mesaji hata mesaji olarak doner
         {
             try
             {

@@ -8,9 +8,8 @@ namespace KayitSistemi
 {
     public abstract class Ogrenci
     {
-        protected static int OgrenciSayisi = 0;
-        public static int ogrenciSayisi{get{return OgrenciSayisi;} set{OgrenciSayisi=value;} }
-        protected string id;
+  
+        protected string id;// ogrenci no
         protected string name, surname, department, program;
         public string GetName { get { return name; } }
         public string GetSurname { get{ return surname; } }
@@ -25,7 +24,6 @@ namespace KayitSistemi
             this.surname = surname;
             this.department = department;
             this.program = program;
-            OgrenciSayisi++;
         }
         
     }

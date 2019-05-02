@@ -19,7 +19,7 @@ namespace KayitSistemi
             this.id = id;
             this.name = name;
         }
-        public void AddProgram(string id,string name)
+        public void AddProgram(string id,string name) // fakulteye program(bolum ekler)
         {
             try
             {

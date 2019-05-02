@@ -10,6 +10,6 @@ namespace KayitSistemi
         public YuksekLisansOgrenci(string name, string surname, string department, string program,string id) : base(name, surname, department, program,id)
         {
 
-        }
+        }//Abstract class ogrencinin constructor methodunu kullanir
     }
 }

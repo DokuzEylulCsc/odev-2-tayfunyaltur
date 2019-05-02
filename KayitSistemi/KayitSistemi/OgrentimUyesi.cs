@@ -16,7 +16,7 @@ namespace KayitSistemi
         public int Workload { get { return workload; }  set { workload = value; } }
         public string GetID { get { return id; } }
 
-        public OgrentimUyesi(string name , string surname,string id)
+        public OgrentimUyesi(string name , string surname,string id) // constructor
         {
             this.name = name;
             this.surname = surname;

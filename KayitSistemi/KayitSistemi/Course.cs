@@ -33,7 +33,7 @@ namespace KayitSistemi
             this.workload = workload;
         }
 
-        public void AddSube(Subeler sb)
+        public void AddSube(Subeler sb) //derse sube ekler
         {
             try
             {
@@ -47,7 +47,7 @@ namespace KayitSistemi
         public void removeSube(Subeler sb)
         {
             subeler.Remove(sb.GetId);
-        }
+        } //dersten sube cikartir
         public void SaveCourse()
         {
             FileStream fs = new FileStream(@"../Ders.txt", FileMode.OpenOrCreate);
@@ -73,6 +73,6 @@ namespace KayitSistemi
             sw.Close();
             fs.Close();
             
-        }
+        } //dosyaya yazma islemlerini yapar 
     }
 }

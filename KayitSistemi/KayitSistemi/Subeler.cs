@@ -21,7 +21,7 @@ namespace KayitSistemi
             this.SubeID = SubeID;
             Hocalar.Add(Hoca.GetID,Hoca);
         }
-        public void addAssistant(Ogrenci assistant)
+        public void addAssistant(Ogrenci assistant) // assistan ekler
         {
             try
             {
@@ -32,7 +32,7 @@ namespace KayitSistemi
                 throw new ArgumentException("Bu kisi zaten bu dersin Asistani");
             }
         }
-        public void addStudent(Ogrenci ogr)
+        public void addStudent(Ogrenci ogr) //ogrenci ekler
         {
             try
             {
@@ -43,7 +43,7 @@ namespace KayitSistemi
                 throw new ArgumentException("Bu kisi zaten bu dersin Ogrencisi");
             }
         }
-        public void addInstructor(OgrentimUyesi ogr)
+        public void addInstructor(OgrentimUyesi ogr) //hoca ekler 
         {
             try
             {
@@ -54,11 +54,11 @@ namespace KayitSistemi
                 throw new ArgumentException("Bu kisi zaten bu dersin Hocasi");
             }
         }
-        public void removeAssistan(Ogrenci ogr)
+        public void removeAssistan(Ogrenci ogr) // asistan siler 
         {
             Asistanlar.Remove(ogr.GetId);
         }
-        public void removeInstructor(OgrentimUyesi hoca)
+        public void removeInstructor(OgrentimUyesi hoca) // hoca siler
         {
             if (Hocalar.Count > 1)
             {
@@ -69,7 +69,7 @@ namespace KayitSistemi
                 throw new Exception("Bir subenin butun hocalari silinemez");
             }
         }
-        public void removeStudent(Ogrenci ogr)
+        public void removeStudent(Ogrenci ogr) // ogrenci siler
         {
             Ogrenciler.Remove(ogr.GetId);
         }
