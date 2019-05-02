@@ -31,7 +31,7 @@ namespace KayitSistemi
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem != null)
+            if (listBox1.SelectedItem != null && c.getSubeler.Count>0)
             {
                 listBox2.Items.Clear();
                 listBox3.Items.Clear();
@@ -51,6 +51,13 @@ namespace KayitSistemi
                 {
                     listBox4.Items.Add(ou.GetId + "-" + ou.GetName + " " + ou.GetSurname);
                 }
+            }
+            else
+            {
+                listBox1.Items.Clear(); 
+                listBox2.Items.Clear();
+                listBox3.Items.Clear();
+                listBox4.Items.Clear();
             }
         }
         public void refresh()
@@ -96,7 +103,15 @@ namespace KayitSistemi
         private void button2_Click(object sender, EventArgs e)
         {
             c.removeSube(c.getSubeler[listBox1.SelectedItem.ToString()]);
-            refresh();
+            if (c.getSubeler.Count > 0)
+            {
+                refresh();
+            }
+            else
+            {
+                listBox1.SelectedItem = null;
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -156,8 +171,9 @@ namespace KayitSistemi
                 if(listBox2.Items.Count > 1)
                 {
                     OgrentimUyesi hoca = Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetInstructors[ID];
-                    c.getSubeler[ID].removeInstructor(hoca);
+                    c.getSubeler[listBox1.SelectedItem.ToString()].removeInstructor(hoca);
                     refresh();
+                    selectFirstIndex();
                 }
             }
             
@@ -176,8 +192,9 @@ namespace KayitSistemi
                 }
                 
                 Ogrenci asistan = Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetSutdents[ID];
-                c.getSubeler[ID].removeAssistan(asistan);
+                c.getSubeler[listBox1.SelectedItem.ToString()].removeAssistan(asistan);
                 refresh();
+                selectFirstIndex();
             }
         }
 
@@ -194,8 +211,16 @@ namespace KayitSistemi
                 }
 
                 Ogrenci ogr = Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetSutdents[ID];
-                c.getSubeler[ID].removeStudent(ogr);
+                c.getSubeler[listBox1.SelectedItem.ToString()].removeStudent(ogr);
                 refresh();
+                selectFirstIndex();
+            }
+        }
+        public void selectFirstIndex()
+        {
+            if(listBox1.Items != null)
+            {
+                listBox1.SelectedIndex = 0;
             }
         }
     }

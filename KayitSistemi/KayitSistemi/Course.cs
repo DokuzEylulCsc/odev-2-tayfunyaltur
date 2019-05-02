@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml;
 
 namespace KayitSistemi
 {
@@ -45,6 +47,32 @@ namespace KayitSistemi
         public void removeSube(Subeler sb)
         {
             subeler.Remove(sb.GetId);
+        }
+        public void SaveCourse()
+        {
+            FileStream fs = new FileStream(@"../Ders.txt", FileMode.OpenOrCreate);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.WriteLine(this.GetName);
+            foreach(Subeler s in subeler.Values)
+            {
+                sw.WriteLine("-Sube->" + s.GetId);
+                foreach(OgrentimUyesi hoca in s.GetInstructors.Values)
+                {
+                    sw.WriteLine("--Ogretim Uyeleri-->" + hoca.GetName + " " + hoca.GetSurname);
+                }
+                foreach (Ogrenci asi in s.GetAssistants.Values)
+                {
+                    sw.WriteLine("--Asistanlar-->" + asi.GetName + " " + asi.GetSurname);
+                }
+                foreach (Ogrenci ogr in s.GetStudents.Values)
+                {
+                    sw.WriteLine("--Ogrenciler-->" + ogr.GetName + " " + ogr.GetSurname);
+                }
+            }
+            sw.Flush();
+            sw.Close();
+            fs.Close();
+            
         }
     }
 }

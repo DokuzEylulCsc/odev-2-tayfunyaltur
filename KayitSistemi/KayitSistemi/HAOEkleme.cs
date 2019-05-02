@@ -11,7 +11,7 @@ namespace KayitSistemi
 {
     public partial class HAOEkleme : Form
     {
-        // refresh methodu yazilacak Ekle buttonunda calisacak olan methodlarda cagirilacak ! 
+        
         int a;
         Subeler sb;
         SubeIslemleri si;
@@ -45,7 +45,7 @@ namespace KayitSistemi
                     panel1.Visible = true;
                     foreach (Ogrenci ou in Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetSutdents.Values)
                     {
-                        if (ou is YuksekLisansOgrenci || ou is DoktoraOgrenci)
+                        listBox1.SelectionMode = SelectionMode.MultiExtended;
                             listBox1.Items.Add(ou.GetId + "-" + ou.GetName + " " + ou.GetSurname);
                     }
                     break;
@@ -76,6 +76,8 @@ namespace KayitSistemi
                             sb.addInstructor(Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetInstructors[textBox1.Text]);
                             this.Hide();
                             si.refresh();
+                            si.selectFirstIndex();
+                            
                         }
                         catch
                         {
@@ -99,6 +101,7 @@ namespace KayitSistemi
                                 sb.addInstructor(Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetInstructors[ID]);
                                 this.Hide();
                                 si.refresh();
+                                si.selectFirstIndex();
                             }
                             catch(ArgumentException a)
                             {
@@ -116,6 +119,7 @@ namespace KayitSistemi
                             sb.addAssistant(Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetSutdents[textBox1.Text]);
                             this.Hide();
                             si.refresh();
+                            si.selectFirstIndex();
                         }
                         catch
                         {
@@ -138,6 +142,7 @@ namespace KayitSistemi
                                 sb.addAssistant(Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetSutdents[ID]);
                                 this.Hide();
                                 si.refresh();
+                                si.selectFirstIndex();
                             }
                             catch (ArgumentException a)
                             {
@@ -156,6 +161,7 @@ namespace KayitSistemi
                             sb.addStudent(Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetSutdents[textBox1.Text]);
                             this.Hide();
                             si.refresh();
+                            si.selectFirstIndex();
                         }
                         catch
                         {
@@ -168,9 +174,10 @@ namespace KayitSistemi
                         string ID = "";
                         if (listBox1.SelectedItem != null)
                         {
-                            i = 0;
-                            ID = "";
-                            foreach(object o in listBox1.SelectedItems) { 
+                            
+                            foreach(object o in listBox1.SelectedItems) {
+                                i = 0;
+                                ID = "";
                                 while (o.ToString()[i] != '-')
                                 {
                                     ID += o.ToString()[i];
@@ -179,6 +186,7 @@ namespace KayitSistemi
                                 try
                                 {
                                      sb.addStudent(Universite.GetUnis[Universiteler.UniName].GetDepartments[Fakulteler.fakID].GetPrograms[Bolumler.bolumId].GetSutdents[ID]);
+                                    
                                 }
                                 catch (ArgumentException a)
                                 {
@@ -187,6 +195,7 @@ namespace KayitSistemi
                             }
                             this.Hide();
                             si.refresh();
+                            si.selectFirstIndex();
 
                         }
                     }

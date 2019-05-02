@@ -48,17 +48,17 @@
             // 
             this.panel1.Controls.Add(this.secButton);
             this.panel1.Controls.Add(this.FakultelerLb);
-            this.panel1.Location = new System.Drawing.Point(13, 36);
+            this.panel1.Location = new System.Drawing.Point(13, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 225);
+            this.panel1.Size = new System.Drawing.Size(836, 422);
             this.panel1.TabIndex = 0;
             // 
             // secButton
             // 
             this.secButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.secButton.Location = new System.Drawing.Point(474, 10);
+            this.secButton.Location = new System.Drawing.Point(726, 3);
             this.secButton.Name = "secButton";
-            this.secButton.Size = new System.Drawing.Size(107, 204);
+            this.secButton.Size = new System.Drawing.Size(107, 426);
             this.secButton.TabIndex = 1;
             this.secButton.Text = "Bolum Islemine Git";
             this.secButton.UseVisualStyleBackColor = true;
@@ -66,12 +66,13 @@
             // 
             // FakultelerLb
             // 
+            this.FakultelerLb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(220)))), ((int)(((byte)(252)))));
             this.FakultelerLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FakultelerLb.FormattingEnabled = true;
             this.FakultelerLb.ItemHeight = 25;
-            this.FakultelerLb.Location = new System.Drawing.Point(3, 3);
+            this.FakultelerLb.Location = new System.Drawing.Point(3, 25);
             this.FakultelerLb.Name = "FakultelerLb";
-            this.FakultelerLb.Size = new System.Drawing.Size(465, 204);
+            this.FakultelerLb.Size = new System.Drawing.Size(717, 404);
             this.FakultelerLb.TabIndex = 0;
             // 
             // panel2
@@ -81,15 +82,15 @@
             this.panel2.Controls.Add(this.IdText);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.fakId);
-            this.panel2.Location = new System.Drawing.Point(13, 268);
+            this.panel2.Location = new System.Drawing.Point(13, 471);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(584, 100);
+            this.panel2.Size = new System.Drawing.Size(836, 100);
             this.panel2.TabIndex = 1;
             // 
             // EkleButton
             // 
             this.EkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.EkleButton.Location = new System.Drawing.Point(477, 3);
+            this.EkleButton.Location = new System.Drawing.Point(732, 4);
             this.EkleButton.Name = "EkleButton";
             this.EkleButton.Size = new System.Drawing.Size(104, 93);
             this.EkleButton.TabIndex = 2;
@@ -102,7 +103,7 @@
             this.nameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.nameText.Location = new System.Drawing.Point(172, 56);
             this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(296, 31);
+            this.nameText.Size = new System.Drawing.Size(548, 31);
             this.nameText.TabIndex = 1;
             // 
             // IdText
@@ -110,7 +111,7 @@
             this.IdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.IdText.Location = new System.Drawing.Point(172, 17);
             this.IdText.Name = "IdText";
-            this.IdText.Size = new System.Drawing.Size(296, 31);
+            this.IdText.Size = new System.Drawing.Size(548, 31);
             this.IdText.TabIndex = 1;
             // 
             // label2
@@ -138,9 +139,9 @@
             this.ExitBtn.BackColor = System.Drawing.Color.Red;
             this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ExitBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExitBtn.Location = new System.Drawing.Point(507, 7);
+            this.ExitBtn.Location = new System.Drawing.Point(762, 7);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(87, 23);
+            this.ExitBtn.Size = new System.Drawing.Size(87, 34);
             this.ExitBtn.TabIndex = 6;
             this.ExitBtn.Text = "CIKIS";
             this.ExitBtn.UseVisualStyleBackColor = false;
@@ -153,7 +154,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(16, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.Size = new System.Drawing.Size(95, 34);
             this.button1.TabIndex = 6;
             this.button1.Text = "Geri";
             this.button1.UseVisualStyleBackColor = false;
@@ -163,7 +164,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(123, 7);
+            this.label1.Location = new System.Drawing.Point(117, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 25);
             this.label1.TabIndex = 7;
@@ -173,7 +174,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 380);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(195)))), ((int)(((byte)(239)))));
+            this.ClientSize = new System.Drawing.Size(861, 583);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ExitBtn);

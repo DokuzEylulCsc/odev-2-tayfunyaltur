@@ -32,7 +32,7 @@ namespace KayitSistemi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(listBox1.SelectedItem != null&&textBox1.Text != "")
+            if(listBox1.SelectedItem != null && textBox1.Text != "")
             {
                 int i = 0;
                 string ID1 = "";
@@ -53,6 +53,11 @@ namespace KayitSistemi
                     MessageBox.Show(a.Message);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
